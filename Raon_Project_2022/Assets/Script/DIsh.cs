@@ -24,6 +24,7 @@ public class DIsh : MonoBehaviour
     {
         if(other.tag == "Food")
         {
+            /*
             other.transform.parent = this.gameObject.transform.parent;
             FoodType ingredient = other.GetComponent<FoodType>();
             foodHeight = ingredient.IngredientScale.y + foodHeight;
@@ -32,6 +33,7 @@ public class DIsh : MonoBehaviour
             other.transform.localScale = ingredient.IngredientScale;
             other.transform.GetComponent<BoxCollider>().enabled = false;
             other.transform.GetComponent<Rigidbody>().isKinematic = true;
+            */
             IngredientList.AddLast(ingredient.IngredientName);
             ingredientCount++;
 
