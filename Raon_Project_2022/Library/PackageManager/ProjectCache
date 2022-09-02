@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637938950702668230
-    m_Hash: 210130073
+      ticks: 637976889241144626
+    m_Hash: 77420129
   m_LockFileStatus:
     m_FilePath: C:/Users/GVE03/Github/Raon_WorkShop_2022/Raon_Project_2022/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637938950702678232
-    m_Hash: 2750229563
+      ticks: 637976889251342192
+    m_Hash: 2556994652
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: C:\Users\GVE03\Github\Raon_WorkShop_2022\Raon_Project_2022\Library\PackageCache\com.unity.2d.sprite@1.0.0
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@1.15.15
       testable: 0
       isDirectDependency: 1
@@ -2792,6 +2843,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -2807,6 +2859,7 @@ m_PackageAssets:
         - 1.4.0
         - 1.4.1
         - 1.4.2
+        - 1.4.3
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest
