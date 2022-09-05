@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
-    // 접시에 담긴 재료 저장하는 연결 리스트
-    LinkedList<string> IngredientList = new LinkedList<string>();
-    // 다음에 복제할 음식 프리팹의 높이 설정 위한 변수
-    private float foodHeight;
-    // 임시 프리팹 - 추후에 FoodManager.cs에 연결
-    public GameObject prefab_;
+    LinkedList<string> IngredientList = new LinkedList<string>();    // 접시에 담긴 재료 저장하는 연결 리스트
+    float foodHeight;     // 다음에 복제할 음식 프리팹의 높이 설정 위한 변수
+    public FoodManager foodManager;
 
     void Start()
     {
@@ -18,17 +15,19 @@ public class Dish : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Food")
+        if (other.tag == "Food")
         {
-            other.transform.parent = this.gameObject.transform.parent;
+            other.transform.parent = gameObject.transform.parent;
             FoodType ingredient = other.GetComponent<FoodType>();
 
             Vector3 foodPos = new Vector3(0, foodHeight, 0);
             foodHeight += 0.1f;
-            Debug.Log("foodHeight = " + foodHeight);
-            Destroy(other.gameObject);
-            GameObject temp = Instantiate(prefab_, transform.parent.position+foodPos, prefab_.transform.rotation);
+
+            GameObject prefab = FoodClassification(other.name);
+            Debug.Log("prefab = " + prefab);
+            GameObject temp = Instantiate(prefab, transform.parent.position + foodPos, prefab.transform.rotation);
             temp.transform.parent = transform.parent;
+            Destroy(other.gameObject);
 
             IngredientList.AddLast(ingredient.IngredientName);
             Debug.Log(ingredient.IngredientName);
@@ -36,4 +35,25 @@ public class Dish : MonoBehaviour
         }
     }
 
+    GameObject FoodClassification(string name)
+    {
+        GameObject prefab;
+        switch (name) {
+            case "Food1":
+                prefab = foodManager.foodPrefabs[0].gameObject;
+                break;
+            case "Food2":
+                prefab = foodManager.foodPrefabs[1].gameObject;
+                break;
+            case "Food3":
+                prefab = foodManager.foodPrefabs[2].gameObject;
+                break;
+            case "Food4":
+                prefab = foodManager.foodPrefabs[3].gameObject;
+                break;
+        }
+        return prefab;
+
+    }
+    
 }
