@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
+    //접시에 담긴 재료 저장하는 연결 리스트
     LinkedList<string> IngredientList = new LinkedList<string>();
     private float ingredientCount = 1f;
     private float foodHeight;
