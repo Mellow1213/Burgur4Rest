@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FoodType : MonoBehaviour
 {
-    public string IngredientName;
+    enum Type { Bread_ceiling, Bread_floor, Lettuce, Patty };
+    public Type type;
     public float ingredientHeight;
 }

@@ -458,7 +458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190197191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: -0.077, y: 0.772, z: 0.006}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children:
   - {fileID: 251343578}
@@ -610,7 +610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26a5a946d6f9f845bda4d750d0d2f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IngredientName: TestIngredient4
   ingredientHeight: 0
 --- !u!54 &1740393332
 Rigidbody:
@@ -973,11 +972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8038539436833105149, guid: e1becc39c12972944926fa9b91b6b047, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3
+      value: 0.907
       objectReference: {fileID: 0}
     - target: {fileID: 8038539436833105149, guid: e1becc39c12972944926fa9b91b6b047, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.024
       objectReference: {fileID: 0}
     - target: {fileID: 8038539436833105149, guid: e1becc39c12972944926fa9b91b6b047, type: 3}
       propertyPath: m_LocalRotation.w
