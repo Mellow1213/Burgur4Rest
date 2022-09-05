@@ -2,41 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DIsh : MonoBehaviour
+public class Dish : MonoBehaviour
 {
     LinkedList<string> IngredientList = new LinkedList<string>();
     private float ingredientCount = 1f;
     private float foodHeight;
 
-    // Start is called before the first frame update
+    public GameObject prefab_;
     void Start()
     {
-        foodHeight = 0.3f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foodHeight = 0.1f;
     }
 
     void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Food")
         {
-            
             other.transform.parent = this.gameObject.transform.parent;
+
             FoodType ingredient = other.GetComponent<FoodType>();
-            foodHeight = ingredient.IngredientScale.y + foodHeight;
-            other.transform.localPosition = new Vector3(0f, foodHeight, 0f);
-            other.transform.eulerAngles = Vector3.zero;
-            other.transform.localScale = ingredient.IngredientScale;
-            other.transform.GetComponent<BoxCollider>().enabled = false;
-            other.transform.GetComponent<Rigidbody>().isKinematic = true;
+
+            Vector3 foodPos = new Vector3(0, foodHeight, 0);
+            foodHeight += 0.1f;
+            Debug.Log("foodHeight = " + foodHeight);
+            Destroy(other.gameObject);
+            GameObject temp = Instantiate(prefab_, transform.parent.position+foodPos, prefab_.transform.rotation);
+            temp.transform.parent = transform.parent;
+
             IngredientList.AddLast(ingredient.IngredientName);
             ingredientCount++;
-
             Debug.Log(ingredient.IngredientName);
-        }    
+            Debug.Log(ingredientCount);
+        }
     }
 }
