@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Procedural_Materials/Show.unity
+- path: Assets/Scenes(FoddTest)/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
