@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes(FoddTest)/Test_Hamburger_Buliding.unity
+- path: Assets/01. Scenes/02. InGame.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
