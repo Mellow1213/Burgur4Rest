@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
-    string[] ingredient = new string[5]; // 접시에 담긴 재료 정보 저장 배열
+    string[] ingredient = new string[10]; // 접시에 담긴 재료 정보 저장 배열
     int ingredientCnt = 0; // 접시에 담긴 재료 개수 저장
 
     FoodType foodtype;
@@ -13,7 +13,6 @@ public class Dish : MonoBehaviour
 
     void Start()
     {
-        foodHeight = 0.25f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,8 +25,6 @@ public class Dish : MonoBehaviour
             temp.transform.localPosition = new Vector3(0, foodHeight, 0);
             foodHeight += foodtype.food_Height;
 
-
-
             Destroy(other.gameObject);
 
             ingredient[ingredientCnt] = foodtype.food_name;
@@ -36,22 +33,24 @@ public class Dish : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void Update() // 테스트용. 나중에 삭제
     {
-
-    }
-
-
-    private void Update()
-    {
-        Debug.Log("foodHeight = " + foodHeight);
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("접시에 있는 음식들 : ");
-            for (int i = 0; i < ingredientCnt; i++)
-            {
-                Debug.Log("\n" + ingredient[i]);
-            }
+            IngredientTest();
         }
+
+    }
+    void IngredientTest()
+    {
+        string temp = "";
+        temp += "접시에 있는 음식들 : ";
+        for (int i = 0; i < ingredientCnt; i++)
+        {
+            temp += "[" + i + "] " + ingredient[i] + "  ";
+        }
+        Debug.Log(temp);
+
     }
 }
