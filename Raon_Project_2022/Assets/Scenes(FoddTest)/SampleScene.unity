@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test3
   platingPrefab: {fileID: 4676504967004498487, guid: d5d56f6df37c76f4cae05da25d7f4242, type: 3}
+  food_Height: 0.4
 --- !u!65 &365977872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -343,6 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test3
   platingPrefab: {fileID: 4676504967004498487, guid: d5d56f6df37c76f4cae05da25d7f4242, type: 3}
+  food_Height: 0.4
 --- !u!65 &637916736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -579,6 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test1
   platingPrefab: {fileID: 7279055676413205533, guid: 1d00efbfaf6608a46bdf130963577969, type: 3}
+  food_Height: 0.4
 --- !u!65 &728452059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -706,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test3
   platingPrefab: {fileID: 4676504967004498487, guid: d5d56f6df37c76f4cae05da25d7f4242, type: 3}
+  food_Height: 0.4
 --- !u!65 &891491025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -916,6 +920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test2
   platingPrefab: {fileID: 6068782065828122794, guid: a8acfcd613659f041b72fdd6de309ea8, type: 3}
+  food_Height: 0.4
 --- !u!65 &1137801563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1043,6 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test3
   platingPrefab: {fileID: 4676504967004498487, guid: d5d56f6df37c76f4cae05da25d7f4242, type: 3}
+  food_Height: 0.4
 --- !u!65 &1170679722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1283,6 +1289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test3
   platingPrefab: {fileID: 4676504967004498487, guid: d5d56f6df37c76f4cae05da25d7f4242, type: 3}
+  food_Height: 0.4
 --- !u!65 &1349589977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1566,6 +1573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: Test
   platingPrefab: {fileID: 8038539436833105143, guid: e1becc39c12972944926fa9b91b6b047, type: 3}
+  food_Height: 0.4
 --- !u!54 &1843902258
 Rigidbody:
   m_ObjectHideFlags: 0

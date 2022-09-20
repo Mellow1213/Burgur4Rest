@@ -1,50 +1,53 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Dish : MonoBehaviour
 {
-    string[] ingredient = new string[5]; // ì ‘ì‹œì— ë‹´ê¸´ ì¬ë£Œ ì •ë³´ ì €ì¥ ë°°ì—´ -> ìµœëŒ€ ì¬ë£Œ 10ê°œ
-    int ingredientCnt = 0; // ì ‘ì‹œì— ë‹´ê¸´ ì¬ë£Œ ê°œìˆ˜ ì €ì¥
+    string[] ingredient = new string[5]; // Á¢½Ã¿¡ ´ã±ä Àç·á Á¤º¸ ÀúÀå ¹è¿­
+    int ingredientCnt = 0; // Á¢½Ã¿¡ ´ã±ä Àç·á °³¼ö ÀúÀå
 
-    float foodHeight;
     FoodType foodtype;
-
-    public int MaximumIngredient = 5;
+    public int MaximumIngredient = 5; // Á¢½Ã¿¡ ´ãÀ» ¼ö ÀÖ´Â ÃÖ´ë Àç·á
+    float foodHeight = 0f;
 
     void Start()
     {
-        foodHeight = 0f;
+        foodHeight = 0.25f;
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Food")
         {
-            if (ingredientCnt < MaximumIngredient)
-            {
-                other.transform.parent = gameObject.transform.parent;
-                foodtype = other.GetComponent<FoodType>();
-                Vector3 foodPos = new Vector3(0, foodHeight, 0);
-                foodHeight += 0.1f;
-                GameObject temp = Instantiate(foodtype.platingPrefab, transform.position + foodPos, transform.rotation);
-                temp.transform.parent = transform;
-                Destroy(other.gameObject);
-                ingredient[ingredientCnt] = foodtype.food_name;
-                ingredientCnt++;
-                Debug.Log("ìŒì‹ì˜ ê°¯ìˆ˜ = " + ingredientCnt);
-            }
-            else
-                Debug.Log("ì¬ë£Œë¥¼ 10ê°œ ì´ìƒ ë‹´ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+            foodtype = other.GetComponent<FoodType>();
+            GameObject temp = Instantiate(foodtype.platingPrefab, transform.position, transform.rotation);
+            temp.transform.SetParent(transform);
+            temp.transform.localPosition = new Vector3(0, foodHeight, 0);
+            foodHeight += foodtype.food_Height;
+
+
+
+            Destroy(other.gameObject);
+
+            ingredient[ingredientCnt] = foodtype.food_name;
+            ingredientCnt++;
         }
+
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
     }
 
 
     private void Update()
     {
+        Debug.Log("foodHeight = " + foodHeight);
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("ì ‘ì‹œì— ìˆëŠ” ìŒì‹ë“¤ : ");
+            Debug.Log("Á¢½Ã¿¡ ÀÖ´Â À½½Äµé : ");
             for (int i = 0; i < ingredientCnt; i++)
             {
                 Debug.Log("\n" + ingredient[i]);
