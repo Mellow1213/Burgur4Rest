@@ -6,5 +6,4 @@ public class FoodType : MonoBehaviour
 {
     public string food_name;
     public GameObject platingPrefab;
-    public float food_Height;
 }

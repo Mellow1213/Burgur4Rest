@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251343577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1190197195}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 251343577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d440c8359e478884cb58c6fa756898f6, type: 3}
+  m_Script: {fileID: 11500000, guid: f5d9372532e37594e820aac8c2b6750f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MaximumIngredient: 5
@@ -753,7 +753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Q \uBE75 / W \uC0C1\uCD94 / E \uACE0\uAE30 / A\uCD9C\uB825"
+  m_Text: "Q \uACE0\uAE30 / W \uBE75 / E \uC0C1\uCD94 / A\uCD9C\uB825"
 --- !u!222 &1366246331
 CanvasRenderer:
   m_ObjectHideFlags: 0

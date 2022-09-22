@@ -7,7 +7,7 @@ public class Dish : MonoBehaviour
     string[] ingredient = new string[10]; // 접시에 담긴 재료 정보 저장 배열
     int ingredientCnt = 0; // 접시에 담긴 재료 개수 저장
 
-    FoodType foodtype;
+    BurgerType foodtype;
     public int MaximumIngredient = 5; // 접시에 담을 수 있는 최대 재료
     float foodHeight = 0f;
 
@@ -19,7 +19,7 @@ public class Dish : MonoBehaviour
     {
         if (other.tag == "Food")
         {
-            foodtype = other.GetComponent<FoodType>();
+            foodtype = other.GetComponent<BurgerType>();
             GameObject temp = Instantiate(foodtype.platingPrefab, transform.position, transform.rotation);
             temp.transform.SetParent(transform);
             temp.transform.localPosition = new Vector3(0, foodHeight, 0);
