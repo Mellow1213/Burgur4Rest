@@ -8,12 +8,14 @@ public class InputManager : MonoBehaviour
     public bool A;
     public bool S;
     public bool D;
+    public bool Interaction;
 
     private void Update()
     {
-        W = Input.GetKeyDown(KeyCode.W);
-        A = Input.GetKeyDown(KeyCode.A);
-        S = Input.GetKeyDown(KeyCode.S);
-        D = Input.GetKeyDown(KeyCode.D);
+        W = Input.GetKey(KeyCode.W);
+        A = Input.GetKey(KeyCode.A);
+        S = Input.GetKey(KeyCode.S);
+        D = Input.GetKey(KeyCode.D);
+        Interaction = Input.GetKey(KeyCode.E);
     }
 }

@@ -8,11 +8,19 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed = 10.0f; // 이동 속도
 
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
+    InputManager input;
 
+    private void Start()
+    {
+        input = GameObject.Find("InputManager").GetComponent<InputManager>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
         MouseRotation();
-        KeyboardMove();
+        KeyboardMove(); 
+        DishInteraction();
     }
 
     // 마우스의 움직임에 따라 카메라를 회전 시킨다.
@@ -44,5 +52,24 @@ public class PlayerMove : MonoBehaviour
 
         // 이동량을 좌표에 반영
         transform.position += move * moveSpeed * Time.deltaTime;
+    }
+
+    void DishInteraction()
+    {
+        if (input.Interaction)
+        {
+            Ray ray;
+            RaycastHit hit;
+
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if(Physics.Raycast(ray, out hit, 10f))
+            {
+                if (hit.collider.gameObject.CompareTag("Dish"))
+                    Debug.Log("접시 감지 중");
+                else
+                    Debug.Log("접시 감지 못함");
+            }
+        }
     }
 }
