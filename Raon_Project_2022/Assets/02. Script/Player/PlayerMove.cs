@@ -54,6 +54,9 @@ public class PlayerMove : MonoBehaviour
         transform.position += move * moveSpeed * Time.deltaTime;
     }
 
+    GameObject grabObject;
+    public GameObject grabPos;
+    bool isGrab = false;
     void DishInteraction()
     {
         if (input.Interaction)
@@ -63,13 +66,25 @@ public class PlayerMove : MonoBehaviour
 
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hit, 10f))
+            if(Physics.Raycast(ray, out hit, 10f) && !isGrab)
             {
-                if (hit.collider.gameObject.CompareTag("Dish"))
-                    Debug.Log("접시 감지 중");
-                else
-                    Debug.Log("접시 감지 못함");
+                if (hit.collider.gameObject.CompareTag("Dish") || hit.collider.gameObject.CompareTag("Food"))
+                {
+                    grabObject = hit.collider.gameObject;
+                    grabObject.GetComponent<Rigidbody>().isKinematic = true;
+                    grabObject.transform.parent = grabPos.transform;
+                    grabObject.transform.localPosition = Vector3.zero;
+                    grabObject.transform.localRotation = Quaternion.identity;
+                    isGrab = true;
+                }
             }
+        }
+        else if(isGrab)
+        {
+            isGrab = false;
+            grabObject.GetComponent<Rigidbody>().isKinematic = false;
+            grabObject.transform.parent = null;
+            grabObject = null;
         }
     }
 }
