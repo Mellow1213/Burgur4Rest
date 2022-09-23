@@ -72,6 +72,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     grabObject = hit.collider.gameObject;
                     grabObject.GetComponent<Rigidbody>().isKinematic = true;
+                    grabObject.GetComponent<BoxCollider>().enabled = false;
                     grabObject.transform.parent = grabPos.transform;
                     grabObject.transform.localPosition = Vector3.zero;
                     grabObject.transform.localRotation = Quaternion.identity;
@@ -83,6 +84,7 @@ public class PlayerMove : MonoBehaviour
         {
             isGrab = false;
             grabObject.GetComponent<Rigidbody>().isKinematic = false;
+            grabObject.GetComponent<BoxCollider>().enabled = true;
             grabObject.transform.parent = null;
             grabObject = null;
         }
