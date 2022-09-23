@@ -12,6 +12,7 @@ public class Dish_Burger : MonoBehaviour
     float foodHeight = 0f;
     float prevHeight = 0f;
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Food")
