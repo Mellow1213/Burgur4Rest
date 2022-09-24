@@ -12,6 +12,15 @@ public class Dish_Burger : MonoBehaviour
     float foodHeight = 0f;
     float prevHeight = 0f;
 
+    public string[] GetIngredient()
+    {
+        return ingredient;
+    }
+
+    public int GetIngredientCnt()
+    {
+        return ingredientCnt;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,21 +49,4 @@ public class Dish_Burger : MonoBehaviour
         return prev * 0.5f + curr * 0.5f;
     }
 
-    private void Update() // 테스트용. 나중에 삭제
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            IngredientTest();
-        }
-    }
-    void IngredientTest()
-    {
-        string temp = "";
-        temp += "접시에 있는 음식들 : ";
-        for (int i = 0; i < ingredientCnt; i++)
-        {
-            temp += "[" + i + "] " + ingredient[i] + "  ";
-        }
-        Debug.Log(temp);
-    }
 }

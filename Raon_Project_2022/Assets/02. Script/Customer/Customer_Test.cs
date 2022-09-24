@@ -10,7 +10,13 @@ public class Customer_Test : MonoBehaviour
     {
         if (other.CompareTag("Dish"))
         {
-            Debug.Log("그릇 전달 확인");
+            dish_burger = other.GetComponent<Dish_Burger>();
+            food_ingredient = dish_burger.GetIngredient();
+
+            for (int i = 0; i < dish_burger.GetIngredientCnt(); i++)
+                Debug.Log(food_ingredient[i]);
+
+            Destroy(other.transform.parent.gameObject);
         }
     }
 }
