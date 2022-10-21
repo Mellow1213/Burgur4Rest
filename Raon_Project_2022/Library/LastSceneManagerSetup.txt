@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/98. Test/Test_Scenes/Test_Store.unity
+- path: Assets/98. Test/Test_Scenes/Test_Store_inside.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
