@@ -1,0 +1,603 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v4.1.262400)
+
+newmtl enduit_004_Room_Entity_Material
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd enduit_004.jpg
+
+newmtl bois_110_Room_Entity_Material
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd bois_110.jpg
+
+newmtl bois_089_Room_Entity_Material
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd bois_089.jpg
+
+newmtl faience_041_ovcol999999colpic12contpic01_Room_Entity_Material
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd faience_041.jpg
+
+newmtl vitrine_000___mat_vitrine_verre
+Kd 1 1 1
+Ks 0 0 0
+d 0.3490200042724609
+illum 1
+
+newmtl metal_rouille
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd metal_rouille.jpg
+
+newmtl blanc_001
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl porte_022___mat_vitresg
+Kd 0.9960780143737793 0.9960780143737793 0.9960780143737793
+Ks 0.5 0.5 0.5
+d 0.3019610047340393
+Ns 1.482202053070068
+illum 2
+
+newmtl lambris_ext_003
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd lambris_ext_003.jpg
+
+newmtl gris_004
+Kd 0.2470588237047195 0.2470588237047195 0.2470588237047195
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl pack_005_salle_a_manger_armoire___nopaint_bouteilles
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd text_bouteille.jpg
+
+newmtl pack_005_salle_a_manger_armoire___poignees
+Kd 0.4235289990901947 0.4235289990901947 0.4235289990901947
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl bois_055
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd bois_055.jpg
+
+newmtl bleu_002
+Kd 0.7843137383460999 0.8352941274642944 0.8705882430076599
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl pack_003_cuisine_001_table___mat_pack_003_cuisine_001_table_tablepieds
+Kd 0.800000011920929 0.7960780262947083 0.7764710187911987
+Ks 0 0 0
+d 1
+Ns 7.699999809265137
+illum 2
+
+newmtl bleu_004
+Kd 0.5568627715110779 0.6549019813537598 0.7764706015586853
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl eames_chair_dining_2____eames_chair_dinning_bmetal
+Kd 0 0 0
+Ks 0 0 0
+d 1
+Ns 0.699999988079071
+illum 2
+
+newmtl bleu_012
+Kd 0.2823529541492462 0.364705890417099 0.5333333611488342
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl eames_chair_dining_2____eames_chair_dinning_bwood
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd bois_046.jpg
+
+newmtl pack_004_salon_002_tableau___enduit1
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+d 1
+illum 1
+
+newmtl бирра-ностра-_ovcol6b5a2ecolpic06contpic09
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd бирра-ностра-.jpg
+
+newmtl bois_046
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd bois_046.jpg
+
+newmtl tissus_096
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd tissus_096.jpg
+
+newmtl vase_fleur_off___phong94
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 18
+illum 2
+map_Kd fleur_tex.pngmap_d fleur_tex.png
+
+
+newmtl plante_interieur_off___bis_palmier_tronc2
+Kd 0.800000011920929 0.800000011920929 0.800000011920929
+Ks 0 0 0
+d 1
+illum 1
+map_Kd tronc_palmier.jpg
+
+newmtl plante_interieur_off___phong56
+Kd 0.8899999856948853 0.8899999856948853 0.8899999856948853
+Ks 0.1258741319179535 0.1258741319179535 0.1258741319179535
+d 1
+illum 1
+
+newmtl plante_interieur_off___phong57
+Kd 0.5734265446662903 0.5734265446662903 0.5734265446662903
+Ks 0 0 0
+d 1
+illum 1
+map_Kd terre_002.jpg
+
+newmtl plante_interieur_off___phong80
+Kd 0.800000011920929 0.800000011920929 0.800000011920929
+Ks 0 0 0
+d 1
+illum 1
+map_Kd palmier_tex_001.pngmap_d palmier_tex_001.png
+
+
+newmtl orange_003
+Kd 0.9019607901573181 0.5843137502670288 0.3294117748737335
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl mur_vegetal_off___phong150
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 18
+illum 2
+map_Kd Tex_plante_montante.pngmap_d Tex_plante_montante.png
+
+
+newmtl mur_vegetal_off___phong151
+Kd 0.800000011920929 0.800000011920929 0.800000011920929
+Ks 0 0 0
+d 1
+Ns 18
+illum 2
+map_Kd feuille_chlorophytum_tex.pngmap_d feuille_chlorophytum_tex.png
+
+
+newmtl lambris_ext_004
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd lambris_ext_004.jpg
+
+newmtl mur_vegetal_off___phong30
+Kd 0.800000011920929 0.800000011920929 0.800000011920929
+Ks 0 0 0
+d 1
+Ns 18
+illum 2
+map_Kd terre_002.jpg
+
+newmtl mur_vegetal_off___phong31
+Kd 0.800000011920929 0.800000011920929 0.800000011920929
+Ks 0 0 0
+d 1
+Ns 18
+illum 2
+map_Kd feuille_fougere_tex.pngmap_d feuille_fougere_tex.png
+
+
+newmtl bois_054
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd bois_054.jpg
+
+newmtl meridienne_001___bis_mat_metalbasique004sg
+Kd 0.009999999776482582 0.009999999776482582 0
+Ks 0.1500000059604645 0.1500000059604645 0.1500000059604645
+d 1
+illum 1
+
+newmtl tissus_089
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd tissus_089.jpg
+
+newmtl meridienne_001___mat_tissus078_bissg
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd tissus_078.jpg
+
+newmtl tissus_089_ovcola0a3cccolpic00contpic03
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd tissus_089.jpg
+
+newmtl tissus_078
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd tissus_078.jpg
+
+newmtl porte_009___d
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl porte_009___p
+Kd 0.5843139886856079 0.5843139886856079 0.5843139886856079
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl 700-nw_ovcol81592bcolpic05contpic10
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd 700-nw.jpg
+
+newmtl kitchen_classic_style_double_oven_000___phong4sg
+Kd 1 1 1
+Ks 0.07999999821186066 0.07999999821186066 0.07999999821186066
+d 1
+Ns 1
+illum 2
+map_Kd stainless__brushed_000.jpg
+
+newmtl kitchen_classic_style_double_oven_000___phong5sg
+Kd 0.7607839703559875 0.7607839703559875 0.7607839703559875
+Ks 0.5 0.5 0.5
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_double_oven_000___phong6sg
+Kd 0.2156859934329987 0.2156859934329987 0.2156859934329987
+Ks 0.5 0.5 0.5
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_double_oven_000___phong7sg
+Kd 0.137254998087883 0.137254998087883 0.137254998087883
+Ks 0.05000000074505806 0.05000000074505806 0.05000000074505806
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_double_oven_000___vitre
+Kd 0.9960780143737793 0.9960780143737793 0.9960780143737793
+Ks 0.009999999776482582 0.009999999776482582 0.009999999776482582
+d 0.3019610047340393
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_base_cabinet_007___phong2sg
+Kd 0.6156859993934631 0.6156859993934631 0.6156859993934631
+Ks 0.1000000014901161 0.1000000014901161 0.1000000014901161
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_base_cabinet_007___phong8sg
+Kd 1 1 1
+Ks 1 1 1
+d 1
+Ns 1
+illum 2
+map_Kd marble_white_000.jpg
+
+newmtl kitchen_classic_style_base_corner_001___phong2sg
+Kd 0.6156859993934631 0.6156859993934631 0.6156859993934631
+Ks 0.1000000014901161 0.1000000014901161 0.1000000014901161
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_base_corner_001___phong8sg
+Kd 1 1 1
+Ks 1 1 1
+d 1
+Ns 1
+illum 2
+map_Kd marble_white_000.jpg
+
+newmtl kitchen_classic_style_dishwasher_000___phong5sg
+Kd 0.7607839703559875 0.7607839703559875 0.7607839703559875
+Ks 0.5 0.5 0.5
+d 1
+Ns 1
+illum 2
+
+newmtl kitchen_classic_style_dishwasher_000___phong8sg
+Kd 1 1 1
+Ks 1 1 1
+d 1
+Ns 1
+illum 2
+map_Kd marble_white_000.jpg
+
+newmtl kitchen_classic_style_dishwasher_000___phong9sg
+Kd 1 1 1
+Ks 0.25 0.25 0.25
+d 1
+Ns 1
+illum 2
+map_Kd dishwasher_siemens_000.jpg
+
+newmtl hotte_001___material__177
+Kd 0.5843139886856079 0.5843139886856079 0.5843139886856079
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl hotte_001___material__178
+Kd 0.800000011920929 0.7960780262947083 0.7764710187911987
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl hotte_001___material__179
+Kd 0.4235289990901947 0.4235289990901947 0.4235289990901947
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl wc_004___wc_004_blinn1sg
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2899999916553497
+illum 2
+
+newmtl wc_004___wc_004_blinn3sg
+Kd 0.4235289990901947 0.4235289990901947 0.4235289990901947
+Ks 0 0 0
+d 1
+Ns 0.3199999928474426
+illum 2
+
+newmtl pack_002_sdb_deroule_papier___01___defaulta
+Kd 0.9294120073318481 0.7137259840965271 0.7019609808921814
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl pack_002_sdb_deroule_papier___01___defaulte
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl pack_002_sdb_deroule_papier___01___defaultz
+Kd 0.4235289990901947 0.4235289990901947 0.4235289990901947
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl lavabo_004___lambert3sg
+Kd 1 1 1
+Ks 1 1 1
+d 1
+illum 1
+
+newmtl beige_004
+Kd 0.9411764740943909 0.8784313797950745 0.7372549176216125
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl lavabo_004___phong1sg
+Kd 0.5843139886856079 0.5843139886856079 0.5843139886856079
+Ks 1 1 1
+d 1
+illum 1
+
+newmtl ws13d0020
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd ws13d0020.jpg
+
+newmtl d671effe7f2cd3fb8e0c119e09825243
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd d671effe7f2cd3fb8e0c119e09825243.jpg
+
+newmtl kisspng-pizza-knight-italian-cuisine-vegetarian-cuisine-fo-food-5ab8d54f287396
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd kisspng-pizza-knight-italian-cuisine-vegetarian-cuisine-fo-food-5ab8d54f287396.jpg
+
+newmtl пробованная-и-известная-ита-ьянская-е-а-76810378
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd пробованная-и-известная-ита-ьянская-е-а-76810378.jpg
+
+newmtl makaroniiztverdixsortovpshenitsikakievib_7ff8e298
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd makaroniiztverdixsortovpshenitsikakievib_7ff8e298.jpg
+
+newmtl s1200 (3)
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd s1200 (3).jpg
+
+newmtl poubelle_002___phong1sg
+Kd 0.1333329975605011 0.137254998087883 0.1568630039691925
+Ks 0.5 0.5 0.5
+d 1
+illum 1
+
+newmtl poubelle_002___poubelle
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.4000000059604645
+illum 2
+map_Kd metal_005.jpg
+
+newmtl pack_004_cuisine_001_chaise___pied
+Kd 0.5843139886856079 0.5843139886856079 0.5843139886856079
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl pack_004_cuisine_001_chaise___rond
+Kd 0 0 0
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl pack_004_cuisine_001_chaise___tour
+Kd 1 1 1
+Ks 0 0 0
+d 1
+illum 1
+map_Kd tex_alu2.jpg
+
+newmtl pack_004_cuisine_001_chaise___tubes
+Kd 0.800000011920929 0.7960780262947083 0.7764710187911987
+Ks 0 0 0
+d 1
+illum 1
+
+newmtl ocre_001_Wall_Entity_Material
+Kd 0.729411780834198 0.4941176474094391 0.2117647081613541
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl enduit_004_Wall_Entity_Material
+Kd 1 1 1
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+map_Kd enduit_004.jpg
+
+newmtl beige_005_Wall_Entity_Material
+Kd 0.8745098114013672 0.7921568751335144 0.686274528503418
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl gris_004_Wall_Entity_Material
+Kd 0.2470588237047195 0.2470588237047195 0.2470588237047195
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl beige_006_Wall_Entity_Material
+Kd 0.9098039269447327 0.9098039269447327 0.8784313797950745
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
+newmtl beige_004_Wall_Entity_Material
+Kd 0.9411764740943909 0.8784313797950745 0.7372549176216125
+Ks 0 0 0
+d 1
+Ns 0.2000000029802322
+illum 2
+
