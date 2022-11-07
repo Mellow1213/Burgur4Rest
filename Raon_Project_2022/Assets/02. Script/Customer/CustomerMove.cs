@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class CustomerMove : MonoBehaviour
 {
     NavMeshAgent _navMeshAgent;
-    [Tooltip("Index 0은 카운터, 1~은 각 테이블 위치임.")]
+    [Tooltip("Index 0은 카운터, Index 1은 출구, 나머지는 각 테이블 위치임.")]
     public Transform[] destinations;
     // Start is called before the first frame update
     void Start()

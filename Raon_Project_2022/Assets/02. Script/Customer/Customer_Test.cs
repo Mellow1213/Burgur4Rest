@@ -6,6 +6,8 @@ public class Customer_Test : MonoBehaviour
 {
     string[] food_ingredient = new string[10];
     Dish_Burger dish_burger = null;
+
+    public CustomerMove _customerMove;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Dish"))
@@ -19,6 +21,8 @@ public class Customer_Test : MonoBehaviour
                 Debug.Log(food_ingredient[i]);
 
             Destroy(other.transform.parent.gameObject);
+
+            _customerMove.ChangeDestination(1);
         }
     }
 }

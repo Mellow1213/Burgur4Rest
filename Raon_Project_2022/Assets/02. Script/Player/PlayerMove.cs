@@ -86,7 +86,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     Debug.Log("»Æ¿Œ");
                     // output customer's order to screen
-                    hit.collider.GetComponent<CustomerMove>().ChangeDestination(1);
+                    hit.collider.GetComponent<CustomerMove>().ChangeDestination(2);
                 }
             }
         }
