@@ -81,6 +81,13 @@ public class PlayerMove : MonoBehaviour
                     grabObject.transform.localRotation = Quaternion.identity;
                     isGrab = true;
                 }
+
+                if (hit.collider.CompareTag("Customer"))
+                {
+                    Debug.Log("»Æ¿Œ");
+                    // output customer's order to screen
+                    hit.collider.GetComponent<CustomerMove>().ChangeDestination(1);
+                }
             }
         }
         else if(isGrab)

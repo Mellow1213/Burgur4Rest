@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dish
   - Food
+  - Customer
   layers:
   - Default
   - TransparentFX
