@@ -10,8 +10,10 @@ public class PlayerMove : MonoBehaviour
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
     InputManager input;
 
+    CharacterController _characterController;
     private void Start()
     {
+        _characterController = GetComponent<CharacterController>();
         input = GameObject.Find("InputManager").GetComponent<InputManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -51,7 +53,8 @@ public class PlayerMove : MonoBehaviour
         move = new Vector3(move.x, 0, move.z).normalized;
 
         // 이동량을 좌표에 반영
-        transform.position += move * moveSpeed * Time.deltaTime;
+        _characterController.Move(move * moveSpeed * Time.deltaTime);
+        //transform.position += move * moveSpeed * Time.deltaTime;
     }
 
     GameObject grabObject;

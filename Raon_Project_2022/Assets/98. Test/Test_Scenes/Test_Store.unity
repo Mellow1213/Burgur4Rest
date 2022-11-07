@@ -534,6 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 364975164}
   - component: {fileID: 364975165}
+  - component: {fileID: 364975166}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -572,6 +573,24 @@ MonoBehaviour:
   turnSpeed: 4
   moveSpeed: 10
   grabPos: {fileID: 99170016}
+--- !u!143 &364975166
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364975163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &372377528
 GameObject:
   m_ObjectHideFlags: 0
