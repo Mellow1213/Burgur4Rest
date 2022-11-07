@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Dish_Burger : MonoBehaviour
 {
-    string[] ingredient = new string[10]; // Á¢½Ã¿¡ ´ã±ä Àç·á Á¤º¸ ÀúÀå ¹è¿­
-    int ingredientCnt = 0; // Á¢½Ã¿¡ ´ã±ä Àç·á °³¼ö ÀúÀå
+    string[] ingredient = new string[10]; // ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+    int ingredientCnt = 0; // ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     BurgerType foodtype;
-    public int MaximumIngredient = 5; // Á¢½Ã¿¡ ´ãÀ» ¼ö ÀÖ´Â ÃÖ´ë Àç·á
+    public int MaximumIngredient = 5; // ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
     float foodHeight = 0f;
     float prevHeight = 0f;
 
@@ -22,6 +22,11 @@ public class Dish_Burger : MonoBehaviour
         return ingredientCnt;
     }
 
+    public void SetIngredient(string[] input_ingredient)
+    {
+        ingredient = input_ingredient;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Food")
@@ -31,7 +36,7 @@ public class Dish_Burger : MonoBehaviour
             temp.transform.SetParent(transform);
 
             Debug.Log("prevHeight = " + prevHeight + ", currHeight = " + foodtype.food_Height);
-            Debug.Log("Â÷ÀÌ°ª : " + (prevHeight / 2 + foodtype.food_Height / 2) + ", ÇÔ¼ö ¹ÝÈ¯ °ª = " + CalcHeight(prevHeight, foodtype.food_Height));
+            Debug.Log("ï¿½ï¿½ï¿½Ì°ï¿½ : " + (prevHeight / 2 + foodtype.food_Height / 2) + ", ï¿½Ô¼ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ = " + CalcHeight(prevHeight, foodtype.food_Height));
 
             foodHeight += CalcHeight(prevHeight, foodtype.food_Height);
             temp.transform.localPosition = new Vector3(0, foodHeight, 0);
