@@ -32,7 +32,7 @@ public class Dish_Burger : MonoBehaviour
         if (other.tag == "Food")
         {
             foodtype = other.GetComponent<BurgerType>();
-            GameObject temp = Instantiate(foodtype.platingPrefab, transform.position, transform.rotation);
+            GameObject temp = Instantiate(foodtype.platingPrefab, transform.position, foodtype.platingPrefab.transform.rotation);
             temp.transform.SetParent(transform);
 
             Debug.Log("prevHeight = " + prevHeight + ", currHeight = " + foodtype.food_Height);
