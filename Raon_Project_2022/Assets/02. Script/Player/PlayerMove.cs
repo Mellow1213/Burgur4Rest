@@ -1,13 +1,13 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float turnSpeed = 4.0f; // ¸¶¿ì½º È¸Àü ¼Óµµ
-    public float moveSpeed = 10.0f; // ÀÌµ¿ ¼Óµµ
+    public float turnSpeed = 4.0f; // ë§ˆìš°ìŠ¤ íšŒì „ ì†ë„
+    public float moveSpeed = 10.0f; // ì´ë™ ì†ë„
 
-    private float xRotate = 0.0f; // ³»ºÎ »ç¿ëÇÒ XÃà È¸Àü·®Àº º°µµ Á¤ÀÇ ( Ä«¸Ş¶ó À§ ¾Æ·¡ ¹æÇâ )
+    private float xRotate = 0.0f; // ë‚´ë¶€ ì‚¬ìš©í•  Xì¶• íšŒì „ëŸ‰ì€ ë³„ë„ ì •ì˜ ( ì¹´ë©”ë¼ ìœ„ ì•„ë˜ ë°©í–¥ )
     InputManager input;
 
     CharacterController _characterController;
@@ -25,25 +25,25 @@ public class PlayerMove : MonoBehaviour
         DishInteraction();
     }
 
-    // ¸¶¿ì½ºÀÇ ¿òÁ÷ÀÓ¿¡ µû¶ó Ä«¸Ş¶ó¸¦ È¸Àü ½ÃÅ²´Ù.
+    // ë§ˆìš°ìŠ¤ì˜ ì›€ì§ì„ì— ë”°ë¼ ì¹´ë©”ë¼ë¥¼ íšŒì „ ì‹œí‚¨ë‹¤.
     void MouseRotation()
     {
-        // ÁÂ¿ì·Î ¿òÁ÷ÀÎ ¸¶¿ì½ºÀÇ ÀÌµ¿·® * ¼Óµµ¿¡ µû¶ó Ä«¸Ş¶ó°¡ ÁÂ¿ì·Î È¸ÀüÇÒ ¾ç °è»ê
+        // ì¢Œìš°ë¡œ ì›€ì§ì¸ ë§ˆìš°ìŠ¤ì˜ ì´ë™ëŸ‰ * ì†ë„ì— ë”°ë¼ ì¹´ë©”ë¼ê°€ ì¢Œìš°ë¡œ íšŒì „í•  ì–‘ ê³„ì‚°
         float yRotateSize = Input.GetAxis("Mouse X") * turnSpeed;
-        // ÇöÀç yÃà È¸Àü°ª¿¡ ´õÇÑ »õ·Î¿î È¸Àü°¢µµ °è»ê
+        // í˜„ì¬ yì¶• íšŒì „ê°’ì— ë”í•œ ìƒˆë¡œìš´ íšŒì „ê°ë„ ê³„ì‚°
         float yRotate = Camera.main.transform.eulerAngles.y + yRotateSize;
 
-        // À§¾Æ·¡·Î ¿òÁ÷ÀÎ ¸¶¿ì½ºÀÇ ÀÌµ¿·® * ¼Óµµ¿¡ µû¶ó Ä«¸Ş¶ó°¡ È¸ÀüÇÒ ¾ç °è»ê(ÇÏ´Ã, ¹Ù´ÚÀ» ¹Ù¶óº¸´Â µ¿ÀÛ)
+        // ìœ„ì•„ë˜ë¡œ ì›€ì§ì¸ ë§ˆìš°ìŠ¤ì˜ ì´ë™ëŸ‰ * ì†ë„ì— ë”°ë¼ ì¹´ë©”ë¼ê°€ íšŒì „í•  ì–‘ ê³„ì‚°(í•˜ëŠ˜, ë°”ë‹¥ì„ ë°”ë¼ë³´ëŠ” ë™ì‘)
         float xRotateSize = -Input.GetAxis("Mouse Y") * turnSpeed;
-        // À§¾Æ·¡ È¸Àü·®À» ´õÇØÁÖÁö¸¸ -45µµ ~ 80µµ·Î Á¦ÇÑ (-45:ÇÏ´Ã¹æÇâ, 80:¹Ù´Ú¹æÇâ)
-        // Clamp ´Â °ªÀÇ ¹üÀ§¸¦ Á¦ÇÑÇÏ´Â ÇÔ¼ö
+        // ìœ„ì•„ë˜ íšŒì „ëŸ‰ì„ ë”í•´ì£¼ì§€ë§Œ -45ë„ ~ 80ë„ë¡œ ì œí•œ (-45:í•˜ëŠ˜ë°©í–¥, 80:ë°”ë‹¥ë°©í–¥)
+        // Clamp ëŠ” ê°’ì˜ ë²”ìœ„ë¥¼ ì œí•œí•˜ëŠ” í•¨ìˆ˜
         xRotate = Mathf.Clamp(xRotate + xRotateSize, -45, 80);
 
-        // Ä«¸Ş¶ó È¸Àü·®À» Ä«¸Ş¶ó¿¡ ¹İ¿µ(X, YÃà¸¸ È¸Àü)
+        // ì¹´ë©”ë¼ íšŒì „ëŸ‰ì„ ì¹´ë©”ë¼ì— ë°˜ì˜(X, Yì¶•ë§Œ íšŒì „)
         Camera.main.transform.eulerAngles = new Vector3(xRotate, yRotate, 0);
     }
 
-    // Å°º¸µåÀÇ ´­¸²¿¡ µû¶ó ÀÌµ¿
+    // í‚¤ë³´ë“œì˜ ëˆŒë¦¼ì— ë”°ë¼ ì´ë™
     void KeyboardMove()
     {
         Vector3 move =
@@ -52,7 +52,7 @@ public class PlayerMove : MonoBehaviour
 
         move = new Vector3(move.x, 0, move.z).normalized;
 
-        // ÀÌµ¿·®À» ÁÂÇ¥¿¡ ¹İ¿µ
+        // ì´ë™ëŸ‰ì„ ì¢Œí‘œì— ë°˜ì˜
         _characterController.Move(move * moveSpeed * Time.deltaTime);
         //transform.position += move * moveSpeed * Time.deltaTime;
     }
@@ -84,7 +84,6 @@ public class PlayerMove : MonoBehaviour
 
                 if (hit.collider.CompareTag("Customer"))
                 {
-                    Debug.Log("È®ÀÎ");
                     // output customer's order to screen
                     hit.collider.GetComponent<CustomerMove>().ChangeDestination(2);
                 }

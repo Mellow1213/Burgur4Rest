@@ -24,6 +24,7 @@ public class CustomerChoice : MonoBehaviour
         // -> Run Review() to give grades of the dish
     }
     
+
     public void SetTaste()
     { // randomly choose the likable ingredient and hateable ingredient
         string[] ingredientList = { "Bread", "Patty", "Lettuce", "Tomato" }; // Temporary ingredientList

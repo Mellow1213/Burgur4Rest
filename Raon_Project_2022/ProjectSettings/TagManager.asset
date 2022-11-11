@@ -7,6 +7,7 @@ TagManager:
   - Dish
   - Food
   - Customer
+  - StandPosition
   layers:
   - Default
   - TransparentFX

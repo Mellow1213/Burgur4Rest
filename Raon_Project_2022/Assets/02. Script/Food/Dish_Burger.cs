@@ -35,9 +35,6 @@ public class Dish_Burger : MonoBehaviour
             GameObject temp = Instantiate(foodtype.platingPrefab, transform.position, foodtype.platingPrefab.transform.rotation);
             temp.transform.SetParent(transform);
 
-            Debug.Log("prevHeight = " + prevHeight + ", currHeight = " + foodtype.food_Height);
-            Debug.Log("���̰� : " + (prevHeight / 2 + foodtype.food_Height / 2) + ", �Լ� ��ȯ �� = " + CalcHeight(prevHeight, foodtype.food_Height));
-
             foodHeight += CalcHeight(prevHeight, foodtype.food_Height);
             temp.transform.localPosition = new Vector3(0, foodHeight, 0);
             prevHeight = foodtype.food_Height;
