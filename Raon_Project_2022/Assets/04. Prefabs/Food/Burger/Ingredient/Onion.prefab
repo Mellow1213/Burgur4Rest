@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: onion
   platingPrefab: {fileID: 8135241780599717617, guid: 07ec2e32c404f924785b4a989098a95b, type: 3}
-  food_Height: 0.3
+  food_Height: 0.2
 --- !u!1 &7785013352639378103
 GameObject:
   m_ObjectHideFlags: 0

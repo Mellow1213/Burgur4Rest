@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: tomato
   platingPrefab: {fileID: 6929501508592475377, guid: 57fa71cf8aa34aa4bb71dcd3af25c1f3, type: 3}
-  food_Height: 0.2
+  food_Height: 0.15
 --- !u!1 &1383860305116637677
 GameObject:
   m_ObjectHideFlags: 0

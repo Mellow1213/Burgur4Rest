@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: bread-down
   platingPrefab: {fileID: 6861676862485360719, guid: ecce8215e338ee74ba39783df7fa453a, type: 3}
-  food_Height: 1
+  food_Height: 0.6
 --- !u!54 &4401809354618038480
 Rigidbody:
   m_ObjectHideFlags: 0

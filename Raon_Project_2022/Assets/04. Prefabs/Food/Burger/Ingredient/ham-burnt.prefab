@@ -127,4 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: ham-burnt
   platingPrefab: {fileID: 1922683558265796521, guid: ce0eef041731e804d92a01346f9f210d, type: 3}
-  food_Height: 0.5
+  food_Height: 0.35

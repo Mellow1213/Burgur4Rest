@@ -127,4 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: ham-baked
   platingPrefab: {fileID: 3793696573286144902, guid: f94f65a31707b9846a95a26acc30439b, type: 3}
-  food_Height: 0.5
+  food_Height: 0.35
