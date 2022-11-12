@@ -1624,7 +1624,7 @@ MonoBehaviour:
   - {fileID: 1312533992}
   - {fileID: 110424789}
   - {fileID: 1230112687}
-  patience: 30
+  patience: 10
 --- !u!65 &1118065629
 BoxCollider:
   m_ObjectHideFlags: 0

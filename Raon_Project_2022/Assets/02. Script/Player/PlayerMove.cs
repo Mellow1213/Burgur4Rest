@@ -85,7 +85,7 @@ public class PlayerMove : MonoBehaviour
                 if (hit.collider.CompareTag("Customer"))
                 {
                     // output customer's order to screen
-                    hit.collider.GetComponent<CustomerMove>().ChangeDestination(2);
+                    hit.collider.GetComponent<CustomerMove>().TableDestination();
                 }
             }
         }

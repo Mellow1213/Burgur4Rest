@@ -12,6 +12,7 @@ public class CustomerMove : MonoBehaviour
 
     public float patience = 30f;
     bool doTimer = false;
+    bool acceptedOrder = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +32,25 @@ public class CustomerMove : MonoBehaviour
         _navMeshAgent.destination = destinations[index].position;
     }
 
+    public void TableDestination()
+    {
+        if (!acceptedOrder)
+        {
+            patience += 20;
+            acceptedOrder = true;
+            ChangeDestination(2);
+        }
+    }
+
     void WaitingTime()
     {
         if(doTimer)
             patience -= Time.deltaTime;
         //Debug.Log(patience);
+        if(patience <= 0)
+        {
+            ChangeDestination(1);
+        }
     }
 
 

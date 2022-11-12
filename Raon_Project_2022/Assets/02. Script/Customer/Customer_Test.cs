@@ -9,10 +9,6 @@ public class Customer_Test : MonoBehaviour
     Customer_Status _customer_status = null;
     GameObject customer = null;
 
-    private void Update()
-    {
-    }
-
     public CustomerMove _customerMove;
     private void OnTriggerEnter(Collider other)
     {
@@ -24,29 +20,33 @@ public class Customer_Test : MonoBehaviour
                 food_ingredient = dish_burger.GetIngredient();
 
 
-            Debug.Log("food_ingredient[0] = " + food_ingredient[0]);
-            Debug.Log("food_ingredient[dish_burger.GetIngredientCnt() - 1] = " + food_ingredient[dish_burger.GetIngredientCnt() - 1]);
+            for (int i = 0; i < dish_burger.GetIngredientCnt(); i++)
+            {
+                if (food_ingredient[i] == _customer_status.goodIngredient)
+                {
+                    Debug.Log("호감 햄버거");
+                }
+                if (food_ingredient[i] == _customer_status.badIngredient)
+                {
+                    Debug.Log("비호감 햄버거");
+                    Debug.Log("손님의 최종 평점이 하락합니다.");
+                }
+            }
+
             if (food_ingredient[0] != "bread-down" || food_ingredient[dish_burger.GetIngredientCnt() - 1] != "bread-top")
             {
                 Debug.Log("잘못된 햄버거!");
+                Debug.Log("특이 취향 손님을 제외하곤 최종 평점이 크게 하락합니다.");
             }
-
-            for (int i = 0; i < dish_burger.GetIngredientCnt(); i++)
+            else
             {
-
-                if (food_ingredient[i] == _customer_status.goodIngredient)
-                    Debug.Log("호감 가는 햄버거~");
-                if (food_ingredient[i] == _customer_status.badIngredient)
-                    Debug.Log("비호감 햄버거~");
+                Debug.Log("알맞은 형태의 햄버거!");
             }
-             
 
             Destroy(other.transform.parent.gameObject);
 
             _customerMove.ChangeDestination(1);
         }
-
-
 
         if (other.CompareTag("Customer"))
         {
