@@ -87,6 +87,11 @@ public class PlayerMove : MonoBehaviour
                     // output customer's order to screen
                     hit.collider.GetComponent<CustomerMove>().TableDestination();
                 }
+
+                if (hit.collider.CompareTag("Dispenser"))
+                {
+                    hit.collider.GetComponent<FoodDispenser>().SpawnPrefab();
+                }
             }
         }
         else if(isGrab)
