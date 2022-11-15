@@ -54,6 +54,9 @@ public class PlayerMove : MonoBehaviour
 
         // 이동량을 좌표에 반영
         _characterController.Move(move * moveSpeed * Time.deltaTime);
+
+        transform.position = new Vector3(transform.position.x, -0.8f, transform.position.z);
+        
         //transform.position += move * moveSpeed * Time.deltaTime;
     }
 
