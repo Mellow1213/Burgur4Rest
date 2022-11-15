@@ -9,7 +9,7 @@ public class Customer_Test : MonoBehaviour
     Customer_Status _customer_status = null;
     GameObject customer = null;
 
-    public CustomerMove _customerMove;
+    CustomerMove _customerMove = null;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Dish"))
@@ -47,6 +47,8 @@ public class Customer_Test : MonoBehaviour
                 Destroy(other.transform.parent.gameObject);
 
                 _customerMove.ChangeDestination(1);
+                GameManager.instance.myGold += 100;
+                GameManager.instance.CalRate(Random.Range(5, 10));
             }
         }
 
@@ -54,6 +56,7 @@ public class Customer_Test : MonoBehaviour
         {
             customer = other.gameObject;
             _customer_status = customer.GetComponent<Customer_Status>();
+            _customerMove = customer.GetComponent<CustomerMove>();
         }
     }
 
@@ -63,6 +66,7 @@ public class Customer_Test : MonoBehaviour
         {
             customer = null;
             _customer_status = null;
+            _customerMove = null;
         }
     }
 }

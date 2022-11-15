@@ -60,8 +60,11 @@ public class PlayerMove : MonoBehaviour
     GameObject grabObject;
     public GameObject grabPos;
     bool isGrab = false;
+
+    float timer = 0f;
     void DishInteraction()
     {
+        timer += Time.deltaTime;
         if (input.Interaction)
         {
             Ray ray;
@@ -88,8 +91,9 @@ public class PlayerMove : MonoBehaviour
                     hit.collider.GetComponent<CustomerMove>().TableDestination();
                 }
 
-                if (hit.collider.CompareTag("Dispenser"))
+                if (hit.collider.CompareTag("Dispenser") && timer > 0.2f)
                 {
+                    timer = 0f;
                     hit.collider.GetComponent<FoodDispenser>().SpawnPrefab();
                 }
             }
