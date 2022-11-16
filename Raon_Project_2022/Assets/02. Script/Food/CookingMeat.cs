@@ -6,10 +6,15 @@ public class CookingMeat : MonoBehaviour
 {
     public GameObject cookedPrefab;
     float timer = 0;
+    bool isCooking = false;
     // Update is called once per frame
     void Update()
     {
-        if(timer > 10)
+        Debug.Log("timer = " + timer);
+        if (isCooking)
+            timer += Time.deltaTime;
+
+        if (timer > 10)
         {
             Debug.Log("¿ä¸® µÊ");
             Instantiate(cookedPrefab, transform.position, transform.rotation);
@@ -17,11 +22,14 @@ public class CookingMeat : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Grill"))
-        {
-            timer += Time.deltaTime;
-        }
+            isCooking = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Grill"))
+            isCooking = false;
     }
 }
