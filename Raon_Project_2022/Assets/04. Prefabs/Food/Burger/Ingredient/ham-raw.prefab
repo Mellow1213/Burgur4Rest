@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 444345001696109568}
   - component: {fileID: 444345001696109569}
   - component: {fileID: 444345001696109570}
+  - component: {fileID: -8680628628836570135}
   m_Layer: 0
   m_Name: ham-raw
   m_TagString: Food
@@ -128,3 +129,16 @@ MonoBehaviour:
   food_name: ham-raw
   platingPrefab: {fileID: 2008662863128210831, guid: 9742b9c55d5b1ac40a43091dffbdba62, type: 3}
   food_Height: 0.35
+--- !u!114 &-8680628628836570135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444345001696109571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf3ffcbf5769ac43be358f9b278e614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookedPrefab: {fileID: 21783179024708968, guid: 27a3261e3119382428cee489ee697193, type: 3}

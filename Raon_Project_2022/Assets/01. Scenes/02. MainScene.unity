@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 501959355}
   - component: {fileID: 501959354}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CookingTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4397,8 +4397,8 @@ GameObject:
   - component: {fileID: 1116849367}
   - component: {fileID: 1116849366}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Grill
+  m_TagString: Grill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

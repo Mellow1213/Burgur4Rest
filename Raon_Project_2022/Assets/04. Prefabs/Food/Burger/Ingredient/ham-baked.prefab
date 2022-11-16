@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 21783179024708972}
   - component: {fileID: 21783179024708973}
   - component: {fileID: 21783179024708974}
+  - component: {fileID: -2284818774763269266}
   - component: {fileID: 21783179024708975}
   m_Layer: 0
   m_Name: ham-baked
@@ -113,6 +114,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03091247, y: 0.028354485, z: 0.005472113}
   m_Center: {x: 0, y: 0.00000011874363, z: 0.000000012107195}
+--- !u!114 &-2284818774763269266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21783179024708968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf3ffcbf5769ac43be358f9b278e614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cookedPrefab: {fileID: 4774475580635375662, guid: f96f8fab9d202db4cbe26654fefc74c9, type: 3}
 --- !u!114 &21783179024708975
 MonoBehaviour:
   m_ObjectHideFlags: 0

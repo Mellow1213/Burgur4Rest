@@ -9,6 +9,7 @@ TagManager:
   - Customer
   - StandPosition
   - Dispenser
+  - Grill
   layers:
   - Default
   - TransparentFX
