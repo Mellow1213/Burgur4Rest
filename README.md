@@ -19,3 +19,4 @@ Unity 3D 2020.3.33f1, Blender 2.9v
 
 접시에 음식을 Drag&Drop시 정보 저장 및 Plating 동작 구현 - 세부 디테일 수정 과정
 가게 모델링 및 배치 기획 중
+![image](https://user-images.githubusercontent.com/75158889/202169057-005959ce-35cb-4051-8f0e-4cf060b7bc08.png)
