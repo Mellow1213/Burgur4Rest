@@ -127,4 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: alface
   platingPrefab: {fileID: 6404376679203535684, guid: de37e0729ccfa64418b30133a034c958, type: 3}
-  food_Height: 0.15
+  food_Height: 0.08

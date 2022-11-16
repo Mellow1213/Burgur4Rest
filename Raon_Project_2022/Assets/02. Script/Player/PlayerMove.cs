@@ -83,6 +83,12 @@ public class PlayerMove : MonoBehaviour
                     grabObject.transform.localPosition = Vector3.zero;
                     grabObject.transform.localRotation = Quaternion.identity;
                     isGrab = true;
+
+                    if (hit.collider.GetComponent<CookingMeat>())
+                    {
+                        hit.collider.GetComponent<CookingMeat>().isCooking = false;
+                    }
+
                 }
 
                 if (hit.collider.CompareTag("Customer"))

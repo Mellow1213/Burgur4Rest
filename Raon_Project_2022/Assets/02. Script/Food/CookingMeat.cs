@@ -6,7 +6,7 @@ public class CookingMeat : MonoBehaviour
 {
     public GameObject cookedPrefab;
     float timer = 0;
-    bool isCooking = false;
+    public bool isCooking = false;
     // Update is called once per frame
     void Update()
     {
@@ -22,14 +22,9 @@ public class CookingMeat : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.collider.CompareTag("Grill"))
             isCooking = true;
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.CompareTag("Grill"))
-            isCooking = false;
     }
 }
