@@ -899,6 +899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 4401809354618038490, guid: 8c41d433702663c49b9036ab0a2ea3dc, type: 3}
   spawnPos: {fileID: 868092748}
+  cost: 5
 --- !u!65 &138858101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1728,6 +1729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 444345001696109571, guid: 7246cfe3937bbf24baac0a99a4f46b37, type: 3}
   spawnPos: {fileID: 701653236}
+  cost: 10
 --- !u!65 &320221403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1839,6 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 1979762421964031596, guid: 1f00c76545b5e4945b777d422645f26b, type: 3}
   spawnPos: {fileID: 567481571}
+  cost: 7
 --- !u!65 &329492342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3342,6 +3345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 1089210494067504655, guid: cdcc36321a6f2a1469938a1535c9bebd, type: 3}
   spawnPos: {fileID: 1709437350}
+  cost: 1
 --- !u!65 &715389498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6649,6 +6653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 1383860304934593371, guid: 978d6d3cfa230ba4c9d0ba45a64bc1f2, type: 3}
   spawnPos: {fileID: 711743015}
+  cost: 5
 --- !u!65 &1543209591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7103,6 +7108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 4857403619514991489, guid: 746ce47c0223ebb4581ea430be1884dc, type: 3}
   spawnPos: {fileID: 1350331028}
+  cost: 5
 --- !u!65 &1640974798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7443,6 +7449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 7785013352440786467, guid: 74fd6cc9314b61647aed697dba696646, type: 3}
   spawnPos: {fileID: 274264038}
+  cost: 5
 --- !u!65 &1710235615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8496,6 +8503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefab: {fileID: 6429306638840252764, guid: 199915e5769af704b9bbe0bf59d1a283, type: 3}
   spawnPos: {fileID: 8582702}
+  cost: 5
 --- !u!65 &2032424034
 BoxCollider:
   m_ObjectHideFlags: 0
