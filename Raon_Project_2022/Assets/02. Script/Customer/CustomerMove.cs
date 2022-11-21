@@ -15,12 +15,13 @@ public class CustomerMove : MonoBehaviour
     bool doTimer = false;
     bool acceptedOrder = false;
 
+    int index;
     // Start is called before the first frame update
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _posMananger = GameObject.Find("Pos").GetComponent<PosManager>();
-        destinations =_posMananger.positions;
+        destinations = _posMananger.positions;
         _navMeshAgent.destination = destinations[0].position;
     }
 
@@ -41,18 +42,40 @@ public class CustomerMove : MonoBehaviour
         {
             patience += 20;
             acceptedOrder = true;
-            ChangeDestination(Random.Range(2, destinations.Length));
+            if (!_posMananger.IsFull())
+            {
+                while (true)
+                {
+                    index = Random.Range(2, destinations.Length);
+                    if (!_posMananger.getSeat(index))
+                    {
+                        ChangeDestination(index);
+                        _posMananger.setSeat(index, true);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log("자리 업슴");
+            }
         }
+    }
+
+    public void GoOut()
+    {
+        ChangeDestination(1);
+        _posMananger.setSeat(index, false);
     }
 
     void WaitingTime()
     {
-        if(doTimer)
+        if (doTimer)
             patience -= Time.deltaTime;
         //Debug.Log(patience);
-        if(patience <= 0)
+        if (patience <= 0)
         {
-            ChangeDestination(1);
+            GoOut();
         }
     }
 

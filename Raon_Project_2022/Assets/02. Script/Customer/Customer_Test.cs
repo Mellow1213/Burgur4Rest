@@ -46,7 +46,7 @@ public class Customer_Test : MonoBehaviour
 
                 Destroy(other.transform.parent.gameObject);
 
-                _customerMove.ChangeDestination(1);
+                _customerMove.GoOut();
                 GameManager.instance.myGold += 100;
                 GameManager.instance.CalRate(Random.Range(5, 10));
             }
