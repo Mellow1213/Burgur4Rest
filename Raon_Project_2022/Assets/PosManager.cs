@@ -8,27 +8,40 @@ public class PosManager : MonoBehaviour
     public Transform[] positions;
 
     [SerializeField] bool[] seat;
+    int index = 2;
 
     private void Start()
     {
         seat = Enumerable.Repeat<bool>(false, positions.Length).ToArray<bool>();
+        seat[0] = true;
+        seat[1] = true;
     }
 
-    public void setSeat(int index, bool state)
+    private void Update()
     {
-        seat[index] = state;
+        Debug.Log(index);
+        index = Mathf.Clamp(index, 2, 13);
     }
 
-    public bool getSeat(int index)
+    public void SeatOn()
     {
-        return seat[index];
+        if(!IsFull())
+            seat[index++] = true;
     }
+
+    public void SeatOff()
+    {
+        if(index >= 2)
+            seat[index--] = false;
+    }
+
+    public int getIndex() { return index; }
 
     public bool IsFull()
     {
         for (int i = 0; i < seat.Length; i++)
         {
-            if (seat[i])
+            if (!seat[i])
                 return false;
         }
         return true;

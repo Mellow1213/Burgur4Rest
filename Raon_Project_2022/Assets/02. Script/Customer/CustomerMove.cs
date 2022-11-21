@@ -23,11 +23,15 @@ public class CustomerMove : MonoBehaviour
         _posMananger = GameObject.Find("Pos").GetComponent<PosManager>();
         destinations = _posMananger.positions;
         _navMeshAgent.destination = destinations[0].position;
+
+        for(int i = 0; i<destinations.Length; i++)
+            Debug.Log(destinations[i]);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("isFull = " + _posMananger.IsFull());
         WaitingTime();
     }
 
@@ -40,32 +44,26 @@ public class CustomerMove : MonoBehaviour
     {
         if (!acceptedOrder)
         {
-            patience += 20;
-            acceptedOrder = true;
-            if (!_posMananger.IsFull())
+            if (_posMananger.IsFull())
             {
-                while (true)
-                {
-                    index = Random.Range(2, destinations.Length);
-                    if (!_posMananger.getSeat(index))
-                    {
-                        ChangeDestination(index);
-                        _posMananger.setSeat(index, true);
-                        break;
-                    }
-                }
+                Debug.Log("자리 X");
             }
             else
             {
-                Debug.Log("자리 업슴");
+                ChangeDestination(_posMananger.getIndex());
+                _posMananger.SeatOn();
+                patience += 20;
+                acceptedOrder = true;
             }
+
+
         }
     }
 
     public void GoOut()
     {
         ChangeDestination(1);
-        _posMananger.setSeat(index, false);
+        _posMananger.SeatOff();
     }
 
     void WaitingTime()
