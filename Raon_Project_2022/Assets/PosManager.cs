@@ -23,19 +23,23 @@ public class PosManager : MonoBehaviour
         index = Mathf.Clamp(index, 2, 13);
     }
 
-    public void SeatOn()
+    public void SeatOn(int index)
     {
-        if(!IsFull())
-            seat[index++] = true;
+            seat[index] = true;
     }
 
-    public void SeatOff()
+    public void SeatOff(int index)
     {
-        if(index >= 2)
-            seat[index--] = false;
+            seat[index] = false;
     }
 
-    public int getIndex() { return index; }
+    public int getIndex() {
+        for(int i =2; i<=13; i++)
+            if(!seat[i])
+                return i;
+
+        return 0;
+    }
 
     public bool IsFull()
     {

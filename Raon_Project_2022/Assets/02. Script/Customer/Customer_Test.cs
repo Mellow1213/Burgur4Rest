@@ -8,6 +8,14 @@ public class Customer_Test : MonoBehaviour
     [SerializeField] Dish_Burger dish_burger = null;
     [SerializeField] Customer_Status _customer_status = null;
     [SerializeField] GameObject customer = null;
+    BoxCollider _boxCollider;
+    MeshRenderer _meshRenderer;
+
+    private void Start()
+    {
+        _boxCollider = GetComponent<BoxCollider>();
+        _meshRenderer = GetComponent<MeshRenderer>();
+    }
 
     CustomerMove _customerMove = null;
     private void OnTriggerEnter(Collider other)
@@ -57,6 +65,9 @@ public class Customer_Test : MonoBehaviour
             customer = other.gameObject;
             _customer_status = customer.GetComponent<Customer_Status>();
             _customerMove = customer.GetComponent<CustomerMove>();
+
+            _boxCollider.enabled = true;
+            _meshRenderer.enabled = true;
         }
     }
 
@@ -67,6 +78,8 @@ public class Customer_Test : MonoBehaviour
             customer = null;
             _customer_status = null;
             _customerMove = null;
+            _boxCollider.enabled = false;
+            _meshRenderer.enabled = false;
         }
     }
 }

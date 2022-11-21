@@ -15,7 +15,7 @@ public class CustomerMove : MonoBehaviour
     bool doTimer = false;
     bool acceptedOrder = false;
 
-    int index;
+    int CurrentIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +51,8 @@ public class CustomerMove : MonoBehaviour
             else
             {
                 ChangeDestination(_posMananger.getIndex());
-                _posMananger.SeatOn();
+                CurrentIndex = _posMananger.getIndex();
+                _posMananger.SeatOn(CurrentIndex);
                 patience += 20;
                 acceptedOrder = true;
             }
@@ -63,7 +64,7 @@ public class CustomerMove : MonoBehaviour
     public void GoOut()
     {
         ChangeDestination(1);
-        _posMananger.SeatOff();
+        _posMananger.SeatOff(CurrentIndex);
     }
 
     void WaitingTime()
