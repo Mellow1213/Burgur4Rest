@@ -5,9 +5,9 @@ using UnityEngine;
 public class Customer_Test : MonoBehaviour
 {
     string[] food_ingredient = new string[10];
-    Dish_Burger dish_burger = null;
-    Customer_Status _customer_status = null;
-    GameObject customer = null;
+    [SerializeField] Dish_Burger dish_burger = null;
+    [SerializeField] Customer_Status _customer_status = null;
+    [SerializeField] GameObject customer = null;
 
     CustomerMove _customerMove = null;
     private void OnTriggerEnter(Collider other)

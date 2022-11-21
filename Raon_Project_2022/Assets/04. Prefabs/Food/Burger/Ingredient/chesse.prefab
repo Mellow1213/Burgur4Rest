@@ -127,4 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food_name: chesse
   platingPrefab: {fileID: 8343418577995955757, guid: be9349c88403cfc488d81b04caff386a, type: 3}
-  food_Height: 0.25
+  food_Height: 0.15
