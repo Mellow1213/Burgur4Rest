@@ -10,6 +10,14 @@
 [Ll]ogs/
 /[Mm]emoryCaptures/
 
+Raon_Project_2022/Library/Artifacts/
+Raon_Project_2022/Library/ArtifactDB
+Raon_Project_2022/Library/EditorInstance.json
+Raon_Project_2022/Library/SceneVisibilityState.asset
+Raon_Project_2022/Library/SourceAssetDB
+Raon_Project_2022/Temp/UnityLockfile
+Raon_Project_2022/Temp/workerlic
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
