@@ -10,6 +10,7 @@ public class Customer_Test : MonoBehaviour
     [SerializeField] GameObject customer = null;
     BoxCollider _boxCollider;
     MeshRenderer _meshRenderer;
+    CustomerMove _customerMove = null;
 
     private void Start()
     {
@@ -17,7 +18,6 @@ public class Customer_Test : MonoBehaviour
         _meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    CustomerMove _customerMove = null;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Dish"))
@@ -34,10 +34,14 @@ public class Customer_Test : MonoBehaviour
                     _customer_status.money += 7;
                     if (food_ingredient[i] == _customer_status.goodIngredient)
                     {
+                        _customer_status.money += 5;
+                        _customer_status.star += 1;
                         Debug.Log("호감 햄버거");
                     }
                     if (food_ingredient[i] == _customer_status.badIngredient)
                     {
+                        _customer_status.money -= 15;
+                        _customer_status.star -= 2;
                         Debug.Log("비호감 햄버거");
                         Debug.Log("손님의 최종 평점이 하락합니다.");
                     }
@@ -45,6 +49,8 @@ public class Customer_Test : MonoBehaviour
 
                 if (food_ingredient[0] != "bread-down" || food_ingredient[dish_burger.GetIngredientCnt() - 1] != "bread-top")
                 {
+                    _customer_status.money = -15;
+                    _customer_status.star -= 4;
                     Debug.Log("잘못된 햄버거!");
                     Debug.Log("특이 취향 손님을 제외하곤 최종 평점이 크게 하락합니다.");
                 }
@@ -56,8 +62,9 @@ public class Customer_Test : MonoBehaviour
                 Destroy(other.transform.parent.gameObject);
 
                 _customerMove.GoOut();
+                _customer_status.star += (int)(_customerMove.patience / 20);
                 GameManager.instance.myGold += _customer_status.money;
-                GameManager.instance.CalRate(Random.Range(5, 10));
+                GameManager.instance.CalRate(_customer_status.star);
             }
         }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnCustomer : MonoBehaviour
 {
-
     float timer = 0f;
     public GameObject customer;
     // Update is called once per frame

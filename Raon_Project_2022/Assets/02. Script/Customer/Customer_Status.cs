@@ -18,5 +18,11 @@ public class Customer_Status : MonoBehaviour
             badIngredient = ingredientList[Random.Range(2, 8)];
         } while (badIngredient == goodIngredient);
         Debug.Log("good = " + goodIngredient + ", bad = " + badIngredient);
+        star += Random.Range(-2, 2);
+    }
+
+    private void Update()
+    {
+        star = Mathf.Clamp(star, 0, 10);
     }
 }
