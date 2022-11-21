@@ -5,4 +5,5 @@ using UnityEngine;
 public class PosManager : MonoBehaviour
 {
     public Transform[] positions;
+
 }

@@ -8,7 +8,7 @@ public class CustomerMove : MonoBehaviour
     NavMeshAgent _navMeshAgent;
     [Tooltip("Index 0은 카운터, Index 1은 출구, 나머지는 각 테이블 위치임.")]
     PosManager _posMananger;
-    public Transform[] destinations;
+    Transform[] destinations = new Transform[14];
 
 
     public float patience = 30f;
@@ -19,16 +19,14 @@ public class CustomerMove : MonoBehaviour
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _posMananger = GameObject.Find("Pos").GetComponent<PosManager>();
+        destinations =_posMananger.positions;
         _navMeshAgent.destination = destinations[0].position;
-        _posMananger = GameObject.Find("").GetComponent<PosManager>();
-        destinations = _posMananger.positions;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(destinations[1]);
-        Debug.Log(destinations[4]);
         WaitingTime();
     }
 
@@ -43,7 +41,7 @@ public class CustomerMove : MonoBehaviour
         {
             patience += 20;
             acceptedOrder = true;
-            ChangeDestination(2);
+            ChangeDestination(Random.Range(2, destinations.Length));
         }
     }
 
