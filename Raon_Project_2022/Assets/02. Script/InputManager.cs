@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     public bool S;
     public bool D;
     public bool Interaction;
+    public bool Pause;
 
     private void Update()
     {
@@ -17,5 +18,6 @@ public class InputManager : MonoBehaviour
         S = Input.GetKey(KeyCode.S);
         D = Input.GetKey(KeyCode.D);
         Interaction = Input.GetKey(KeyCode.Space);
+        Pause = Input.GetKeyDown(KeyCode.Escape);
     }
 }

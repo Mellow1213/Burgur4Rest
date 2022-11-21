@@ -5,6 +5,7 @@ using UnityEngine;
 public class Customer_Status : MonoBehaviour
 {
     public int star = 7;
+    public int money = 0;
     public string goodIngredient;
     public string badIngredient;
 

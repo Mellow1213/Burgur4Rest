@@ -31,6 +31,7 @@ public class Customer_Test : MonoBehaviour
 
                 for (int i = 0; i < dish_burger.GetIngredientCnt(); i++)
                 {
+                    _customer_status.money += 7;
                     if (food_ingredient[i] == _customer_status.goodIngredient)
                     {
                         Debug.Log("È£°¨ ÇÜ¹ö°Å");
@@ -55,7 +56,7 @@ public class Customer_Test : MonoBehaviour
                 Destroy(other.transform.parent.gameObject);
 
                 _customerMove.GoOut();
-                GameManager.instance.myGold += 100;
+                GameManager.instance.myGold += _customer_status.money;
                 GameManager.instance.CalRate(Random.Range(5, 10));
             }
         }
