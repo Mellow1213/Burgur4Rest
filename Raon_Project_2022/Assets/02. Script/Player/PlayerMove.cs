@@ -10,11 +10,15 @@ public class PlayerMove : MonoBehaviour
     private float xRotate = 0.0f; // 내부 사용할 X축 회전량은 별도 정의 ( 카메라 위 아래 방향 )
     InputManager input;
 
+    AudioSource _audioSource;
+    public AudioClip popSound;
+
     CharacterController _characterController;
 
     float yPos;
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _characterController = GetComponent<CharacterController>();
         input = GameObject.Find("InputManager").GetComponent<InputManager>();
         Cursor.visible = false;
@@ -105,6 +109,7 @@ public class PlayerMove : MonoBehaviour
                 {
                     timer = 0f;
                     hit.collider.GetComponent<FoodDispenser>().SpawnPrefab();
+                    _audioSource.PlayOneShot(popSound);
                 }
             }
         }

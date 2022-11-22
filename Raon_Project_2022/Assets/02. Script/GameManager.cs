@@ -25,10 +25,4 @@ public class GameManager : MonoBehaviour
 
     int rate = 0;
     int rateCnt = 0;
-    public void CalRate(int rate)
-    {
-        rateCnt++;
-        this.rate += rate;
-        myRate = (float)this.rate / rateCnt; 
-    }
 }

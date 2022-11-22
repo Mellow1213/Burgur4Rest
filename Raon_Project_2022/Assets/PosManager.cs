@@ -19,7 +19,6 @@ public class PosManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(index);
         index = Mathf.Clamp(index, 2, 13);
     }
 

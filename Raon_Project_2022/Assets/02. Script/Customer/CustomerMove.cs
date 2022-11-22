@@ -15,8 +15,8 @@ public class CustomerMove : MonoBehaviour
     public AudioClip orderSound;
 
 
-    public float patience = 30f;
-    public bool doTimer = false;
+    public float patience = 45f;
+    public bool doTimer = true;
     bool acceptedOrder = false;
 
     int CurrentIndex;
@@ -29,8 +29,6 @@ public class CustomerMove : MonoBehaviour
         destinations = _posMananger.positions;
         _navMeshAgent.destination = destinations[0].position;
 
-        for(int i = 0; i<destinations.Length; i++)
-            Debug.Log(destinations[i]);
     }
 
     // Update is called once per frame
@@ -49,6 +47,7 @@ public class CustomerMove : MonoBehaviour
     {
         if (!acceptedOrder)
         {
+            doTimer = false;
             if (_posMananger.IsFull())
             {
                 Debug.Log("자리 X");
@@ -61,8 +60,6 @@ public class CustomerMove : MonoBehaviour
                 patience += 20;
                 acceptedOrder = true;
             }
-
-
         }
     }
 
@@ -84,6 +81,7 @@ public class CustomerMove : MonoBehaviour
         //Debug.Log(patience);
         if (patience <= 0)
         {
+            GameManager.instance.myRate -= 20;
             GoOut();
         }
     }
@@ -95,20 +93,11 @@ public class CustomerMove : MonoBehaviour
         if (other.CompareTag("StandPosition"))
         {
             _audioSource.PlayOneShot(orderSound);
-            doTimer = true;
         }
 
         if(other.name == "Pos_exit")
         {
             Destroy(gameObject);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("StandPosition"))
-        {
-            doTimer = false;
         }
     }
 }
