@@ -10,6 +10,10 @@ public class CustomerMove : MonoBehaviour
     PosManager _posMananger;
     Transform[] destinations = new Transform[14];
 
+    AudioSource _audioSource;
+    public AudioClip outSound;
+    public AudioClip orderSound;
+
 
     public float patience = 30f;
     public bool doTimer = false;
@@ -19,6 +23,7 @@ public class CustomerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _posMananger = GameObject.Find("Pos").GetComponent<PosManager>();
         destinations = _posMananger.positions;
@@ -66,6 +71,10 @@ public class CustomerMove : MonoBehaviour
         ChangeDestination(1);
         doTimer = false;
         _posMananger.SeatOff(CurrentIndex);
+        if(patience >= 1)
+        {
+            _audioSource.PlayOneShot(outSound);
+        }
     }
 
     void WaitingTime()
@@ -85,6 +94,7 @@ public class CustomerMove : MonoBehaviour
     {
         if (other.CompareTag("StandPosition"))
         {
+            _audioSource.PlayOneShot(orderSound);
             doTimer = true;
         }
 
