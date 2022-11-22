@@ -56,7 +56,7 @@ public class CustomerMove : MonoBehaviour
                 ChangeDestination(_posMananger.getIndex());
                 CurrentIndex = _posMananger.getIndex();
                 _posMananger.SeatOn(CurrentIndex);
-                patience += 30;
+                patience += 50;
                 acceptedOrder = true;
             }
         }
