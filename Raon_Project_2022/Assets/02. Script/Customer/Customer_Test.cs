@@ -62,7 +62,7 @@ public class Customer_Test : MonoBehaviour
                 Destroy(other.transform.parent.gameObject);
 
                 _customerMove.GoOut();
-                _customer_status.star += (int)(_customerMove.patience / 20);
+                _customer_status.star += (int)(_customerMove.patience / 10);
                 GameManager.instance.myGold += _customer_status.money;
                 GameManager.instance.CalRate(_customer_status.star);
             }
