@@ -12,7 +12,7 @@ public class CustomerMove : MonoBehaviour
 
 
     public float patience = 30f;
-    bool doTimer = false;
+    public bool doTimer = false;
     bool acceptedOrder = false;
 
     int CurrentIndex;
@@ -64,6 +64,7 @@ public class CustomerMove : MonoBehaviour
     public void GoOut()
     {
         ChangeDestination(1);
+        doTimer = false;
         _posMananger.SeatOff(CurrentIndex);
     }
 

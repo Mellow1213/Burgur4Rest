@@ -11,7 +11,7 @@ public class SpawnCustomer : MonoBehaviour
     {
         Debug.Log("스크립트 포함 오브젝트 이름 : " + gameObject);
         timer += Time.deltaTime;
-        if (timer > 10f)
+        if (timer > 20f)
         {
             timer = 0f;
             Instantiate(customer, transform.position, transform.rotation);

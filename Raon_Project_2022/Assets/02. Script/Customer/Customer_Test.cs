@@ -76,6 +76,7 @@ public class Customer_Test : MonoBehaviour
 
             _boxCollider.enabled = true;
             _meshRenderer.enabled = true;
+            _customerMove.doTimer = true;
         }
     }
 
