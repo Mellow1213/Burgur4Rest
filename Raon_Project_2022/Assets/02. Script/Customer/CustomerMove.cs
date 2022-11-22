@@ -86,6 +86,11 @@ public class CustomerMove : MonoBehaviour
         {
             doTimer = true;
         }
+
+        if(other.name == "Pos_exit")
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerExit(Collider other)

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -15,7 +15,7 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moneyText.text = "Gold | " + GameManager.instance.myGold;
-        rateText.text = "Rate | " + GameManager.instance.myRate;
+        moneyText.text = "돈 | " + GameManager.instance.myGold;
+        rateText.text = "평점 | " + GameManager.instance.myRate;
     }
 }

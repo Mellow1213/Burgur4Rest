@@ -9,6 +9,7 @@ public class SpawnCustomer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("스크립트 포함 오브젝트 이름 : " + gameObject);
         timer += Time.deltaTime;
         if (timer > 10f)
         {
