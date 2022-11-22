@@ -11,15 +11,19 @@ public class PlayerMove : MonoBehaviour
     InputManager input;
 
     CharacterController _characterController;
+
+    float yPos;
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
         input = GameObject.Find("InputManager").GetComponent<InputManager>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        yPos = transform.position.y;
     }
     void Update()
     {
+        transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
         MouseRotation();
         KeyboardMove(); 
         DishInteraction();
