@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Customer_Status : MonoBehaviour
 {
-    public int star = 0;
+    public float star;
     public int money = 0;
     public string goodIngredient;
     public string badIngredient;
@@ -18,6 +18,5 @@ public class Customer_Status : MonoBehaviour
             badIngredient = ingredientList[Random.Range(2, 8)];
         } while (badIngredient == goodIngredient);
         Debug.Log("good = " + goodIngredient + ", bad = " + badIngredient);
-        star += Random.Range(-2, 2);
     }
 }

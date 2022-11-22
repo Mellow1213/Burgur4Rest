@@ -11,14 +11,7 @@ public class SpawnCustomer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(GameManager.instance.myRate != 0)
-        {
-            coolTime = 100f / GameManager.instance.myRate;
-        }
-        else
-        {
-            coolTime = 20f;
-        }
+        coolTime = 50f * (1.2f - GameManager.instance.myRate);
         Debug.Log("¼Õ´Ô ÄðÅ¸ÀÓ = " + coolTime);
         if (timer > coolTime)
         {

@@ -35,30 +35,30 @@ public class Customer_Test : MonoBehaviour
                     if (food_ingredient[i] == _customer_status.goodIngredient)
                     {
                         _customer_status.money += 5;
+                        _customer_status.star *= Random.Range(1f, 1.2f);
                     }
                     if (food_ingredient[i] == _customer_status.badIngredient)
                     {
                         _customer_status.money -= 15;
-                        _customer_status.star -= 8;
+                        _customer_status.star *= Random.Range(0.85f, 0.95f);
                     }
                 }
                 if (food_ingredient[0] != "bread-down" || food_ingredient[dish_burger.GetIngredientCnt() - 1] != "bread-top")
                 {
                     _customer_status.money = -15;
-                    _customer_status.star -= 10;
+                    _customer_status.star *= Random.Range(0.85f, 0.90f);
                 }
                 else
                 {
-                    _customer_status.star += Random.Range(8, 12);
+                    _customer_status.star *= Random.Range(1f, 1.05f);
                     Debug.Log("알맞은 형태의 햄버거!");
                 }
 
                 Destroy(other.transform.parent.gameObject);
 
                 _customerMove.GoOut();
-                _customer_status.star += (int)Mathf.Floor(_customerMove.patience/40);
                 GameManager.instance.myGold += _customer_status.money;
-                GameManager.instance.myRate += _customer_status.star;
+                GameManager.instance.myRate *= _customer_status.star;
             }
         }
 

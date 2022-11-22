@@ -34,7 +34,6 @@ public class CustomerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("isFull = " + _posMananger.IsFull());
         WaitingTime();
     }
 
@@ -57,20 +56,28 @@ public class CustomerMove : MonoBehaviour
                 ChangeDestination(_posMananger.getIndex());
                 CurrentIndex = _posMananger.getIndex();
                 _posMananger.SeatOn(CurrentIndex);
-                patience += 20;
+                patience += 30;
                 acceptedOrder = true;
             }
         }
     }
 
+    bool loseStar = true;
     public void GoOut()
     {
         ChangeDestination(1);
         doTimer = false;
         _posMananger.SeatOff(CurrentIndex);
-        if(patience >= 1)
+        if (loseStar)
         {
-            _audioSource.PlayOneShot(outSound);
+            loseStar = false;
+            if (patience >= 1)
+            {
+                _audioSource.PlayOneShot(outSound);
+            }
+            else
+                GameManager.instance.myRate *= 0.95f;
+
         }
     }
 
@@ -81,7 +88,6 @@ public class CustomerMove : MonoBehaviour
         //Debug.Log(patience);
         if (patience <= 0)
         {
-            GameManager.instance.myRate -= 20;
             GoOut();
         }
     }
@@ -95,7 +101,7 @@ public class CustomerMove : MonoBehaviour
             _audioSource.PlayOneShot(orderSound);
         }
 
-        if(other.name == "Pos_exit")
+        if (other.name == "Pos_exit")
         {
             Destroy(gameObject);
         }

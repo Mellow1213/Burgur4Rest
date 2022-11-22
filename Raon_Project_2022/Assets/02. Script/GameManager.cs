@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public int myGold = 0;
     public float myRate = 0f;
 
-    int rate = 0;
-    int rateCnt = 0;
+    private void Update()
+    {
+        myRate = Mathf.Clamp(myRate, 0, 1);
+    }
 }
