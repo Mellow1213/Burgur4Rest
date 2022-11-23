@@ -38,7 +38,7 @@ public class Customer_Test : MonoBehaviour
                     if (food_ingredient[i] == _customer_status.goodIngredient)
                     {
                         _customer_status.money += 5;
-                        _customer_status.star *= Random.Range(1f, 1.2f);
+                        _customer_status.star *= Random.Range(1f, 1.05f);
                         Debug.Log("주문재료 제출");
                     }
                     if (food_ingredient[i] == _customer_status.badIngredient)
