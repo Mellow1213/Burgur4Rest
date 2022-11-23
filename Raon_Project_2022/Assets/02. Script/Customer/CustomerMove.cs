@@ -77,7 +77,6 @@ public class CustomerMove : MonoBehaviour
             }
             else
                 GameManager.instance.myRate *= 0.95f;
-
         }
     }
 
