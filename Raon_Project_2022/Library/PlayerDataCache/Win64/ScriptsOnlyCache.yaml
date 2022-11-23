@@ -64,8 +64,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -97,7 +95,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5088}
     - Class: 114
-      Script: {instanceID: 166688}
+      Script: {instanceID: 5652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -144,6 +142,8 @@ ScriptsOnlyBuild:
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -194,7 +194,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5500}
     - Class: 114
-      Script: {instanceID: 5686}
+      Script: {instanceID: 5688}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -238,8 +238,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -259,7 +257,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3280}
     - Class: 114
-      Script: {instanceID: 166688}
+      Script: {instanceID: 5652}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -937,19 +935,19 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 2aeb3602a3b631c6b48a47b3287aaefc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InputManager
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: asd
+  - hash:
+      serializedVersion: 2
+      Hash: 2aeb3602a3b631c6b48a47b3287aaefc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InputManager
   platform: 19
   scenePathNames:
   - Assets/01. Scenes/01. MainMenu.unity
   - Assets/01. Scenes/02. MainScene.unity
   - Assets/01. Scenes/03. EndGame.unity
-  playerPath: "C:/Users/GVE03/Desktop/\uC0C8 \uD3F4\uB354 (6)/WorkShop_Project.exe"
+  playerPath: C:/Users/GVE03/Desktop/aa/WorkShop_Project.exe

@@ -16,6 +16,6 @@ public class UIScript : MonoBehaviour
     void Update()
     {
         moneyText.text = "돈 | " + GameManager.instance.myGold;
-        rateText.text = "평점 | " + GameManager.instance.myRate;
+        rateText.text = "평점 | " + GameManager.instance.myRate.ToString("F3");
     }
 }

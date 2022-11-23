@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
         A = Input.GetKey(KeyCode.A);
         S = Input.GetKey(KeyCode.S);
         D = Input.GetKey(KeyCode.D);
-        Interaction = Input.GetKey(KeyCode.Space);
+        Interaction = Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0);
         Pause = Input.GetKeyDown(KeyCode.Escape);
     }
 }
