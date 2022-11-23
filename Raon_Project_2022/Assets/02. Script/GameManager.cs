@@ -11,17 +11,14 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            if (instance != this)
-                Destroy(this.gameObject);
-        }
+
+        myGold = 100;
+        myRate = 0.7f;
     }
 
-    public int myGold = 0;
-    public float myRate = 0f;
+    public int myGold;
+    public float myRate;
 
     private void Update()
     {

@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outSound: {fileID: 8300000, guid: 149432656ceb19e4c97b8d1c099f5457, type: 3}
   orderSound: {fileID: 8300000, guid: 07d572a741310364887f22ebb7b09b33, type: 3}
-  patience: 30
+  patience: 45
   doTimer: 1
 --- !u!65 &5255653030414549145
 BoxCollider:

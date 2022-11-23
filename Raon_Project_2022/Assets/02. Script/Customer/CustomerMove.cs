@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class CustomerMove : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CustomerMove : MonoBehaviour
     [Tooltip("Index 0은 카운터, Index 1은 출구, 나머지는 각 테이블 위치임.")]
     PosManager _posMananger;
     Transform[] destinations = new Transform[14];
+
+    Renderer _renderer;
 
     AudioSource _audioSource;
     public AudioClip outSound;
@@ -23,6 +26,7 @@ public class CustomerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _renderer = GetComponent<Renderer>();
         _audioSource = GetComponent<AudioSource>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _posMananger = GameObject.Find("Pos").GetComponent<PosManager>();
@@ -56,7 +60,7 @@ public class CustomerMove : MonoBehaviour
                 ChangeDestination(_posMananger.getIndex());
                 CurrentIndex = _posMananger.getIndex();
                 _posMananger.SeatOn(CurrentIndex);
-                patience += 50;
+                patience += 40;
                 acceptedOrder = true;
             }
         }
@@ -85,6 +89,20 @@ public class CustomerMove : MonoBehaviour
         if (doTimer)
             patience -= Time.deltaTime;
         //Debug.Log(patience);
+
+        if(patience >= 30)
+        {
+            _renderer.material.DOColor(Color.green, 2f);
+        }
+        else if(patience < 30 && patience > 12)
+        {
+            _renderer.material.DOColor(Color.yellow, 2f);
+        }
+        else
+        {
+            _renderer.material.DOColor(Color.red, 2f);
+        }
+
         if (patience <= 0)
         {
             GoOut();
