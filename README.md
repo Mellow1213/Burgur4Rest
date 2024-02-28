@@ -2,7 +2,7 @@
 22년도 씨애랑 소프트웨어전시회 프로젝트
 
 - 프로젝트 참여자   
-  [20 최예찬](github.com/Mellow1213), 21 권수아, 21 오민우, 21 최기현 
+  [20 최예찬](https://github.com/Mellow1213), [21 권수아](https://github.com/sooaKwon02), [21 오민우](https://github.com/MiNuO2), [21 최기현](https://github.com/CKH03)
 
 - 프로젝트 내용
 
