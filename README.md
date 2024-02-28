@@ -1,11 +1,8 @@
-# Raon_WorkShop_2022
+# Burger4Rest
 22년도 씨애랑 소프트웨어전시회 프로젝트
 
-- 프로젝트 팀명
-
-- 프로젝트 제목
-
-Project_Restaurant(가제)
+- 프로젝트 참여자   
+  [20 최예찬](github.com/Mellow1213), 21 권수아, 21 오민우, 21 최기현 
 
 - 프로젝트 내용
 
